@@ -31,8 +31,7 @@ DockerのMemory上限以上までログがでるVerと出ないVerが存在し�
 * 1.12は、7/10上限を超えた
 * 1.10, 1.11, 1,14, 1,15は上限を超えなかった。
 
-```
-for i in {10..15}; do echo golang1.$i; for j in {1..10}; do echo test_no=$j;docker run --rm --memory="64MB" -v "$PWD":/usr/src/myapp -w /usr/src/myapp golang:1.$i go run main.go;done;done
+```ShellSession
 $ for i in {10..15}; do echo golang1.$i; for j in {1..10}; do echo test_no=$j;docker run --rm --memory="64MB" -v "$PWD":/usr/src/myapp -w /usr/src/myapp golang:1.$i go run main.go;done;done
 golang1.10
 test_no=1
